@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>5日間の天気予報</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="js/weather.js" type="text/javascript"></script>
+    <script src="js/fiveDaysWeather.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <!-- googlemap api を組み込んで、callback関数にinitMap()を指定し、自分のアクセスキーを指定する -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key={APIKEY}&callback=initMap"
+      async
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>天気教え～る</h1>
+
+      <div class="address-input-area newmo">
+        <p class="mb-16">
+          地図をクリックするか、天気を知りたい住所を入力してね。
+        </p>
+        <input id="address" type="textbox" placeholder="住所" />
+        <input
+          class="address-button"
+          type="button"
+          value="マップ表示"
+          onclick="geo()"
+        />
+      </div>
+
+      <div class="mymapWrap newmo">
+        <!-- 地図を表示する領域をid名「mymap」として作成 -->
+        <div id="mymap"></div>
+      </div>
+
+      <div class="area newmo">
+        <h2>住所</h2>
+        <p id="addressOutput" class="mb-16"></p>
+        <h2>緯度経度</h2>
+        <div class="flex-spacebetween">
+          <h3>緯度</h3>
+          <p id="lat"></p>
+        </div>
+        <div class="flex-spacebetween">
+          <h3>経度</h3>
+          <p id="lng"></p>
+        </div>
+      </div>
+
+      <div id="weather"></div>
+    </div>
+  </body>
+</html>

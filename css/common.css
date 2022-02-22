@@ -1,0 +1,125 @@
+html {
+  background-color: #d6d6d6;
+
+  color: dimgray;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  transition: 0.3s all linear;
+}
+a:hover {
+  opacity: 0.5;
+  transition: 0.3s all linear;
+}
+
+p {
+  color: #666;
+}
+
+h1 {
+  margin: 32px 0;
+}
+
+img {
+  display: inline;
+}
+
+div.mymapWrap {
+  width: 100%;
+  height: 532px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#mymap {
+  width: 95%;
+  height: 500px;
+}
+
+.gm-style img[src="images/marker.png"] {
+  /* iconで指定した画像の部分だけにスタイルを適応 */
+  border-radius: 50%;
+}
+
+.wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.address-input-area {
+  padding: 16px;
+  margin: 32px 0;
+}
+
+.area {
+  padding: 16px;
+}
+
+#address {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #d6d6d6;
+  box-shadow: inset 7px 7px 13px #b6b6b6, inset -7px -7px 13px #f6f6f6;
+}
+.address-button {
+  margin-left: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
+  box-shadow: 5px 5px 10px #b6b6b6, -5px -5px 10px #f6f6f6;
+}
+.address-button:active {
+  border: none;
+  border-radius: 16px;
+  background: #d6d6d6;
+  box-shadow: inset 5px 5px 10px #b6b6b6, inset -5px -5px 10px #f6f6f6;
+}
+
+.newmo {
+  margin: 32px 0;
+  border-radius: 16px;
+  background: #d6d6d6;
+  box-shadow: 3px 3px 7px #b6b6b6, -3px -3px 7px #f6f6f6;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-end {
+  text-align: right;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrap {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
